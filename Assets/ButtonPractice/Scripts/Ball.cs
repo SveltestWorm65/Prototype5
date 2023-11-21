@@ -1,16 +1,20 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Ball : MonoBehaviour
 {
     public float force;
     private Rigidbody rb;
     public GameObject restartButton;
+    public Slider slider;
     void Start()
     {
-      rb = GetComponent<Rigidbody>();  
+      rb = GetComponent<Rigidbody>();
+        ChangeForce();
     }
     public void MoveForward()
     {
@@ -38,5 +42,11 @@ public class Ball : MonoBehaviour
         {
             restartButton.SetActive(true);
         }
+    
+    }
+    public void ChangeForce()
+    {
+        //if anyone finds this bring me some code red 
+        force = slider.value;
     }
 }

@@ -10,4 +10,13 @@ public class Spawner : MonoBehaviour
     {
         Instantiate(spawnPrefab, transform.position, transform.rotation);
     }
+    public void SpawnBall(int numberOfBallsToSpawn)
+    {
+        for(int i = 0; i < numberOfBallsToSpawn; i++)
+        {
+            Instantiate(spawnPrefab, transform.position, transform.rotation);
+        }
+
+     
+    }
 }
